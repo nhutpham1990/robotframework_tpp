@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220507 11:53:15.472" rpa="false" schemaversion="3">
+<suite id="s1" name="BDD" source="C:\Python\Test_Project\TestSuite\BDD\BDD.robot">
+<kw name="Set Selenium Speed" library="SeleniumLibrary" type="SETUP">
+<arg>0.5</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20220507 11:53:15.797" endtime="20220507 11:53:15.797"/>
+</kw>
+<test id="s1-t1" name="TC03_create_new_customer" line="22">
+<kw name="Given Navigate_to_the_web_and_login_successfully" library="KW_login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${ENV_web}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220507 11:53:15.801" level="INFO">Opening browser 'Chrome' to base url 'https://mpl-dashboard.tpptechnology.com/adminlogin'.</msg>
+<status status="PASS" starttime="20220507 11:53:15.800" endtime="20220507 11:53:19.958"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220507 11:53:19.959" endtime="20220507 11:53:20.633"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${valid_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:20.637" level="INFO">Typing text 'tao.dang@tpptechnology.com' into text field '//*[@id="__layout"]/div/div[2]/form/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220507 11:53:20.635" endtime="20220507 11:53:22.414"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:22.415" level="INFO">Typing password into text field '//*[@id="__layout"]/div/div[2]/form/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220507 11:53:23.472" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220507 11:53:24.057" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220507 11:53:22.414" endtime="20220507 11:53:24.057"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:24.058" level="INFO">Clicking element '//*[@id="__layout"]/div/div[2]/form/div[4]/a/button'.</msg>
+<status status="PASS" starttime="20220507 11:53:24.057" endtime="20220507 11:53:25.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220507 11:53:30.145" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220507 11:53:25.135" endtime="20220507 11:53:30.146"/>
+</kw>
+<status status="PASS" starttime="20220507 11:53:15.800" endtime="20220507 11:53:30.147"/>
+</kw>
+<kw name="When Wait_User_Button_Visible_And_Click" library="KW_create_customer">
+<arg>//*[@id="__layout"]/div/div/div/div[1]/div/ul/li[5]/div[1]/p</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${user_button_locator}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220507 11:53:30.152" endtime="20220507 11:53:31.224"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${user_button_locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:31.226" level="INFO">Clicking element '//*[@id="__layout"]/div/div/div/div[1]/div/ul/li[5]/div[1]/p'.</msg>
+<status status="PASS" starttime="20220507 11:53:31.225" endtime="20220507 11:53:32.334"/>
+</kw>
+<status status="PASS" starttime="20220507 11:53:30.149" endtime="20220507 11:53:32.335"/>
+</kw>
+<kw name="And Click_Customer_Button" library="KW_create_customer">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${customer_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:32.341" level="INFO">Clicking element '//*[@id="__layout"]/div/div/div/div[1]/div/ul/li[5]/div[2]/ul/li[1]/a/span'.</msg>
+<status status="PASS" starttime="20220507 11:53:32.339" endtime="20220507 11:53:33.431"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220507 11:53:38.435" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220507 11:53:33.431" endtime="20220507 11:53:38.435"/>
+</kw>
+<status status="PASS" starttime="20220507 11:53:32.337" endtime="20220507 11:53:38.436"/>
+</kw>
+<kw name="And Click_Plus_Button" library="KW_create_customer">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${plus_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:38.440" level="INFO">Clicking element '//body/div[@id='__nuxt']/div[@id='__layout']/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[2]/div[2]/div[5]/div[1]/div[1]/ul[1]/li[2]/button[1]/*[1]'.</msg>
+<status status="PASS" starttime="20220507 11:53:38.439" endtime="20220507 11:53:39.570"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220507 11:53:44.576" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220507 11:53:39.570" endtime="20220507 11:53:44.576"/>
+</kw>
+<status status="PASS" starttime="20220507 11:53:38.437" endtime="20220507 11:53:44.577"/>
+</kw>
+<kw name="And Input_Customer_Information_New" library="KW_create_customer">
+<arg>Nut</arg>
+<arg>Test_Argu</arg>
+<arg>0401001011</arg>
+<arg>nhut.pham+cust@tpptechnology.com</arg>
+<arg>Aloha123</arg>
+<arg>9999</arg>
+<arg>09091999</arg>
+<arg>//option[contains(text(),'TPP 302 Le van Sy')]</arg>
+<arg>1A</arg>
+<arg>TestArgument</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${first_name}</arg>
+<arg>${value_first_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:44.582" level="INFO">Typing text 'Nut' into text field '//*[@id="swal-input1"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:44.581" endtime="20220507 11:53:46.251"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${last_name}</arg>
+<arg>${value_last_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:46.253" level="INFO">Typing text 'Test_Argu' into text field '//*[@id="swal-input2"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:46.251" endtime="20220507 11:53:47.939"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${phone_number}</arg>
+<arg>${value_phone_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:47.941" level="INFO">Typing text '0401001011' into text field '//*[@id="swal-input3"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:47.939" endtime="20220507 11:53:49.681"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email}</arg>
+<arg>${value_email_customer}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:49.683" level="INFO">Typing text 'nhut.pham+cust@tpptechnology.com' into text field '//*[@id="swal-input5"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:49.682" endtime="20220507 11:53:51.457"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password}</arg>
+<arg>${value_password_customer}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:51.459" level="INFO">Typing password into text field '//*[@id="swal-input12"]'.</msg>
+<msg timestamp="20220507 11:53:52.552" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220507 11:53:53.155" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220507 11:53:51.458" endtime="20220507 11:53:53.156"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${pin}</arg>
+<arg>${value_pin}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:53.157" level="INFO">Typing text '9999' into text field '//*[@id="swal-input13"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:53.156" endtime="20220507 11:53:54.842"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${birthday}</arg>
+<arg>${value_birthday}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:54.844" level="INFO">Typing text '09091999' into text field '//*[@id="swal-input14"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:54.843" endtime="20220507 11:53:56.538"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${apartment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:56.540" level="INFO">Clicking element '//*[@id="swal-input15"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:56.539" endtime="20220507 11:53:57.688"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${name_apartment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:57.690" level="INFO">Clicking element '//option[contains(text(),'TPP 302 Le van Sy')]'.</msg>
+<status status="PASS" starttime="20220507 11:53:57.689" endtime="20220507 11:53:58.775"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${code}</arg>
+<arg>${value_code}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:53:58.777" level="INFO">Typing text '1A' into text field '//*[@id="swal-input9"]'.</msg>
+<status status="PASS" starttime="20220507 11:53:58.776" endtime="20220507 11:54:00.457"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${alias}</arg>
+<arg>${value_alias}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220507 11:54:00.459" level="INFO">Typing text 'TestArgument' into text field '//*[@id="swal-input7"]'.</msg>
+<status status="PASS" starttime="20220507 11:54:00.458" endtime="20220507 11:54:02.166"/>
+</kw>
+<status status="PASS" starttime="20220507 11:53:44.580" endtime="20220507 11:54:02.167"/>
+</kw>
+<kw name="And Click_Create_Button" library="KW_create_customer">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${create_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220507 11:54:02.173" level="INFO">Clicking element '//button[contains(text(),'Create')]'.</msg>
+<status status="PASS" starttime="20220507 11:54:02.171" endtime="20220507 11:54:03.269"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220507 11:54:08.276" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220507 11:54:03.270" endtime="20220507 11:54:08.276"/>
+</kw>
+<status status="PASS" starttime="20220507 11:54:02.169" endtime="20220507 11:54:08.277"/>
+</kw>
+<kw name="Then Verify_PopUp" library="KW_create_customer">
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>${confirm_popup}</arg>
+<arg>${valid_confirm_text}</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<msg timestamp="20220507 11:54:37.423" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00429943+2595139]
+	Ordinal0 [0x003BC9F1+2148849]
+	Ordinal0 [0x002B43F0+1065968]
+	Ordinal0 [0x002A87C2+1017794]
+	Ordinal0 [0x002A8FF8+1019896]
+	Ordinal0 [0x002AA892+1026194]
+	Ordinal0 [0x002A4219+999961]
+	Ordinal0 [0x002B5860+1071200]
+	Ordinal0 [0x0030B2D2+1422034]
+	Ordinal0 [0x002FB806+1357830]
+	Ordinal0 [0x002D6086+1204358]
+	Ordinal0 [0x002D6F96+1208214]
+	GetHandleVerifier [0x005CB232+1658114]
+	GetHandleVerifier [0x0068312C+2411516]
+	GetHandleVerifier [0x004BF261+560433]
+	GetHandleVerifier [0x004BE366+556598]
+	Ordinal0 [0x003C286B+2173035]
+	Ordinal0 [0x003C75F8+2192888]
+	Ordinal0 [0x003C76E5+2193125]
+	Ordinal0 [0x003D11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77127A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77127A4E+238]
+</msg>
+<msg timestamp="20220507 11:54:37.431" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00429943+2595139]
+	Ordinal0 [0x003BC9F1+2148849]
+	Ordinal0 [0x002B43F0+1065968]
+	Ordinal0 [0x002A87C2+1017794]
+	Ordinal0 [0x002A8FF8+1019896]
+	Ordinal0 [0x002AA892+1026194]
+	Ordinal0 [0x002A4219+999961]
+	Ordinal0 [0x002B5860+1071200]
+	Ordinal0 [0x0030B2D2+1422034]
+	Ordinal0 [0x002FB806+1357830]
+	Ordinal0 [0x002D6086+1204358]
+	Ordinal0 [0x002D6F96+1208214]
+	GetHandleVerifier [0x005CB232+1658114]
+	GetHandleVerifier [0x0068312C+2411516]
+	GetHandleVerifier [0x004BF261+560433]
+	GetHandleVerifier [0x004BE366+556598]
+	Ordinal0 [0x003C286B+2173035]
+	Ordinal0 [0x003C75F8+2192888]
+	Ordinal0 [0x003C76E5+2193125]
+	Ordinal0 [0x003D11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77127A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77127A4E+238]
+</msg>
+<status status="FAIL" starttime="20220507 11:54:08.282" endtime="20220507 11:54:37.536"/>
+</kw>
+<status status="FAIL" starttime="20220507 11:54:08.280" endtime="20220507 11:54:37.537"/>
+</kw>
+<kw name="When KW_create_customer.Click_Ok_Button" library="KW_create_customer">
+<status status="NOT RUN" starttime="20220507 11:54:37.538" endtime="20220507 11:54:37.539"/>
+</kw>
+<kw name="Then Verify_Customer_Info_New" library="KW_create_customer">
+<arg>//td[contains(text(),'nhut.pham+cust@tpptechnology.com')]</arg>
+<arg>nhut.pham+cust@tpptechnology.com</arg>
+<status status="NOT RUN" starttime="20220507 11:54:37.539" endtime="20220507 11:54:37.539"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20220507 11:54:37.540" endtime="20220507 11:54:40.080"/>
+</kw>
+<status status="FAIL" starttime="20220507 11:53:15.798" endtime="20220507 11:54:40.084">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00429943+2595139]
+	Ordinal0 [0x003BC9F1+2148849]
+	Ordinal0 [0x002B43F0+1065968]
+	Ordinal0 [0x002A87C2+1017794]
+	Ordinal0 [0x002A8FF8+1019896]
+	Ordinal0 [0x002AA892+1026194]
+	Ordinal0 [0x002A4219+999961]
+	Ordinal0 [0x002B5860+1071200]
+	Ordinal0 [0x0030B2D2+1422034]
+	Ordinal0 [0x002FB806+1357830]
+	Ordinal0 [0x002D6086+1204358]
+	Ordinal0 [0x002D6F96+1208214]
+	GetHandleVerifier [0x005CB232+1658114]
+	GetHandleVerifier [0x0068312C+2411516]
+	GetHandleVerifier [0x004BF261+560433]
+	GetHandleVerifier [0x004BE366+556598]
+	Ordinal0 [0x003C286B+2173035]
+	Ordinal0 [0x003C75F8+2192888]
+	Ordinal0 [0x003C76E5+2193125]
+	Ordinal0 [0x003D11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77127A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77127A4E+238]
+</status>
+</test>
+<status status="FAIL" starttime="20220507 11:53:15.475" endtime="20220507 11:54:40.089"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="BDD">BDD</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220507 11:54:37.423" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=100.0.4896.127)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00429943+2595139]
+	Ordinal0 [0x003BC9F1+2148849]
+	Ordinal0 [0x002B43F0+1065968]
+	Ordinal0 [0x002A87C2+1017794]
+	Ordinal0 [0x002A8FF8+1019896]
+	Ordinal0 [0x002AA892+1026194]
+	Ordinal0 [0x002A4219+999961]
+	Ordinal0 [0x002B5860+1071200]
+	Ordinal0 [0x0030B2D2+1422034]
+	Ordinal0 [0x002FB806+1357830]
+	Ordinal0 [0x002D6086+1204358]
+	Ordinal0 [0x002D6F96+1208214]
+	GetHandleVerifier [0x005CB232+1658114]
+	GetHandleVerifier [0x0068312C+2411516]
+	GetHandleVerifier [0x004BF261+560433]
+	GetHandleVerifier [0x004BE366+556598]
+	Ordinal0 [0x003C286B+2173035]
+	Ordinal0 [0x003C75F8+2192888]
+	Ordinal0 [0x003C76E5+2193125]
+	Ordinal0 [0x003D11FC+2232828]
+	BaseThreadInitThunk [0x75D2FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77127A7E+286]
+	RtlGetAppContainerNamedObjectPath [0x77127A4E+238]
+</msg>
+</errors>
+</robot>

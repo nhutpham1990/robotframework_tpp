@@ -1,0 +1,12 @@
+{
+  "FirstName": "test",
+  "LastName": "one",
+  "Email": "testone_4@example.com",
+  "PhoneNumber": "0401231632",
+  "MonthlyEmails": true,
+  "UserGroupId": null,
+  "BluetoothFob": "abc",
+  "Passcode": "xyz",
+  "Banned": false,
+  "Password": "aaaancm"
+}

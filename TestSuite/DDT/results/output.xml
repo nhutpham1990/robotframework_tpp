@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220614 10:59:35.354" rpa="false" schemaversion="3">
+<suite id="s1" name="Value Excel" source="C:\Python\Test_Project\TestSuite\DDT\value_excel.robot">
+<test id="s1-t1" name="TC_01-Check_column_in_xlsx_excel" line="10">
+<kw name="Get Table Cell" library="RPA.Tables">
+<arg>${table}</arg>
+<arg>0</arg>
+<arg>0</arg>
+<doc>Get a cell value from a table.</doc>
+<msg timestamp="20220614 10:59:35.613" level="FAIL">TypeError: Keyword requires Table object</msg>
+<status status="FAIL" starttime="20220614 10:59:35.612" endtime="20220614 10:59:35.615"/>
+</kw>
+<doc>Verify the value in column</doc>
+<tag>1.0</tag>
+<tag>1.0.1</tag>
+<status status="FAIL" starttime="20220614 10:59:35.610" endtime="20220614 10:59:35.616">TypeError: Keyword requires Table object</status>
+</test>
+<status status="FAIL" starttime="20220614 10:59:35.356" endtime="20220614 10:59:35.618"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">1.0</stat>
+<stat pass="0" fail="1" skip="0">1.0.1</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Value Excel">Value Excel</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

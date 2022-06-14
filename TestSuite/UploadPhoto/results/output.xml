@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220520 17:35:50.839" rpa="false" schemaversion="3">
+<suite id="s1" name="Upload Photo New" source="C:\Python\Test_Project\TestSuite\UploadPhoto\upload_photo_new.robot">
+<test id="s1-t1" name="Upload_photo_successfully" line="8">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.ilovepdf.com/vi/jpg-sang-pdf</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220520 17:35:51.140" level="INFO">Opening browser 'Chrome' to base url 'https://www.ilovepdf.com/vi/jpg-sang-pdf'.</msg>
+<status status="PASS" starttime="20220520 17:35:51.140" endtime="20220520 17:35:54.342"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@id="pickfiles"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220520 17:35:54.344" level="INFO">Clicking element '//*[@id="pickfiles"]'.</msg>
+<status status="PASS" starttime="20220520 17:35:54.343" endtime="20220520 17:35:54.420"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220520 17:35:59.432" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220520 17:35:54.424" endtime="20220520 17:35:59.432"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>"C:/Python/Test_Project/TestSuite/UploadPhoto/hinh-nen-dien-thoai-1-1-1.jpg"</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20220520 17:35:59.433" level="INFO">Sending key(s) ('"C:/Python/Test_Project/TestSuite/UploadPhoto/hinh-nen-dien-thoai-1-1-1.jpg"',) to page.</msg>
+<msg timestamp="20220520 17:35:59.433" level="INFO">Sending keys "C:/Python/Test_Project/TestSuite/UploadPhoto/hinh-nen-dien-thoai-1-1-1.jpg"</msg>
+<status status="PASS" starttime="20220520 17:35:59.433" endtime="20220520 17:35:59.545"/>
+</kw>
+<status status="PASS" starttime="20220520 17:35:51.138" endtime="20220520 17:35:59.546"/>
+</test>
+<status status="PASS" starttime="20220520 17:35:50.842" endtime="20220520 17:35:59.548"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Upload Photo New">Upload Photo New</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
