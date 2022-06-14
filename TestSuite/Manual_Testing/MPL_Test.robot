@@ -7,6 +7,8 @@ Resource    ../Test_Project/Step_Definition/KW_edit_customer_accountTopupLevel.r
 Resource    ../Test_Project/Step_Definition/KW_delete_customer.robot
 Suite Setup  Navigate_to_the_web_and_login
 Suite teardown  Close Window
+Library     Selenium2Library
+
 *** Variables ***
 
 *** Test Cases ***
