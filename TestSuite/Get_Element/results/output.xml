@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220617 13:42:42.451" rpa="false" schemaversion="3">
+<suite id="s1" name="Get Element" source="C:\Python\robotframework_tpp\TestSuite\Get_Element\get_element.robot">
+<test id="s1-t1" name="TC_00-Get_Element_Web" line="12">
+<kw name="Navigate_to_the_web_and_login_successfully" library="KW_login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${ENV_web}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220617 13:42:42.760" level="INFO">Opening browser 'Chrome' to base url 'https://mpl-dashboard.tpptechnology.com/adminlogin'.</msg>
+<status status="PASS" starttime="20220617 13:42:42.759" endtime="20220617 13:42:46.618"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220617 13:42:46.619" endtime="20220617 13:42:46.786"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${valid_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220617 13:42:46.788" level="INFO">Typing text 'tao.dang@tpptechnology.com' into text field '//*[@id="__layout"]/div/div[2]/form/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220617 13:42:46.787" endtime="20220617 13:42:47.006"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220617 13:42:47.007" level="INFO">Typing password into text field '//*[@id="__layout"]/div/div[2]/form/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220617 13:42:47.058" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220617 13:42:47.140" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220617 13:42:47.006" endtime="20220617 13:42:47.140"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220617 13:42:47.141" level="INFO">Clicking element '//*[@id="__layout"]/div/div[2]/form/div[4]/a/button'.</msg>
+<status status="PASS" starttime="20220617 13:42:47.140" endtime="20220617 13:42:47.198"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220617 13:42:52.201" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220617 13:42:47.198" endtime="20220617 13:42:52.201"/>
+</kw>
+<status status="PASS" starttime="20220617 13:42:42.758" endtime="20220617 13:42:52.201"/>
+</kw>
+<kw name="Click_User_Button" library="KW_create_customer">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${user_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20220617 13:42:52.202" endtime="20220617 13:42:52.250"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${user_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220617 13:42:52.251" level="INFO">Clicking element '//*[@id="__layout"]/div/div/div/div[1]/div/ul/li[5]/div[1]/p'.</msg>
+<status status="PASS" starttime="20220617 13:42:52.250" endtime="20220617 13:42:52.305"/>
+</kw>
+<status status="PASS" starttime="20220617 13:42:52.202" endtime="20220617 13:42:52.306"/>
+</kw>
+<kw name="Wait_User_Button_Visible_And_Click" library="KW_create_customer">
+<msg timestamp="20220617 13:42:52.307" level="FAIL">Keyword 'KW_create_customer.Wait_User_Button_Visible_And_Click' expected 1 argument, got 0.</msg>
+<status status="FAIL" starttime="20220617 13:42:52.306" endtime="20220617 13:42:52.307"/>
+</kw>
+<kw name="Get Element Attribute" library="SeleniumLibrary">
+<var>${element}</var>
+<arg>//button[contains(text(),'Search')]</arg>
+<arg>id</arg>
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20220617 13:42:52.312" endtime="20220617 13:42:52.312"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${element}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20220617 13:42:52.313" endtime="20220617 13:42:52.313"/>
+</kw>
+<doc>User can get element in the web</doc>
+<tag>1.0</tag>
+<tag>1.0.0</tag>
+<status status="FAIL" starttime="20220617 13:42:42.757" endtime="20220617 13:42:52.315">Keyword 'KW_create_customer.Wait_User_Button_Visible_And_Click' expected 1 argument, got 0.</status>
+</test>
+<doc>Get Element</doc>
+<status status="FAIL" starttime="20220617 13:42:42.454" endtime="20220617 13:42:52.318"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">1.0</stat>
+<stat pass="0" fail="1" skip="0">1.0.0</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Get Element">Get Element</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
