@@ -1,9 +1,9 @@
 *** Settings ***
 Library  SeleniumLibrary
-Resource    ../Test_Project/Step_Definition/KW_login.robot
-Resource    ../Test_Project/Step_Definition/KW_create_customer.robot
-Resource    ../Test_Project/Step_Definition/KW_edit_customer_accountTopupLevel.robot
-Resource    ../Test_Project/Step_Definition/KW_common.robot
+Resource    ../../Step_Definition/KW_login.robot
+Resource    ../../Step_Definition/KW_create_customer.robot
+Resource    ../../Step_Definition/KW_edit_customer_accountTopupLevel.robot
+Resource    ../../Step_Definition/KW_common.robot
 Suite Setup  Set Selenium Speed    0.5
 Test teardown   Close Browser
 
@@ -11,7 +11,7 @@ Test teardown   Close Browser
 
 *** Test Cases ***
 TC01_login_with_admin
-  given login_admin    tao.dang@tpptechnology.com    tppPassword2021
+  login_admin    tao.dang@tpptechnology.com    tppPassword2021
 
 
 # TC02_Scroll_to_element
