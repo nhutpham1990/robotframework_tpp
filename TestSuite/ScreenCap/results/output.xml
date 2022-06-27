@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0 (Python 3.10.2 on win32)" generated="20220623 09:33:17.557" rpa="false" schemaversion="3">
+<suite id="s1" name="Screencapture" source="C:\Python\robotframework_tpp\TestSuite\ScreenCap\screencapture.robot">
+<test id="s1-t1" name="Take a screen shot successfully" line="12">
+<kw name="Navigate_to_the_web_and_login_successfully" library="KW_login">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${ENV_web}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20220623 09:33:18.130" level="INFO">Opening browser 'Chrome' to base url 'https://mpl-dashboard.tpptechnology.com/adminlogin'.</msg>
+<status status="PASS" starttime="20220623 09:33:18.130" endtime="20220623 09:33:21.717"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220623 09:33:21.718" endtime="20220623 09:33:21.844"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${email_field}</arg>
+<arg>${valid_email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20220623 09:33:21.848" level="INFO">Typing text 'tao.dang@tpptechnology.com' into text field '//*[@id="__layout"]/div/div[2]/form/div[2]/div[1]/input'.</msg>
+<status status="PASS" starttime="20220623 09:33:21.845" endtime="20220623 09:33:22.056"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>${password_field}</arg>
+<arg>${valid_password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20220623 09:33:22.057" level="INFO">Typing password into text field '//*[@id="__layout"]/div/div[2]/form/div[2]/div[2]/input'.</msg>
+<msg timestamp="20220623 09:33:22.111" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20220623 09:33:22.192" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20220623 09:33:22.056" endtime="20220623 09:33:22.192"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20220623 09:33:22.192" level="INFO">Clicking element '//*[@id="__layout"]/div/div[2]/form/div[4]/a/button'.</msg>
+<status status="PASS" starttime="20220623 09:33:22.192" endtime="20220623 09:33:22.244"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20220623 09:33:27.261" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20220623 09:33:22.245" endtime="20220623 09:33:27.261"/>
+</kw>
+<status status="PASS" starttime="20220623 09:33:18.129" endtime="20220623 09:33:27.261"/>
+</kw>
+<kw name="Take Screenshot" library="ScreenCapLibrary">
+<arg>name=screenshot</arg>
+<arg>format=png</arg>
+<doc>Takes a screenshot in the specified format at library import and
+embeds it into the log file (PNG by default).</doc>
+<msg timestamp="20220623 09:33:27.428" level="INFO" html="true">&lt;a href="screenshot_1.png"&gt;&lt;img src="screenshot_1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20220623 09:33:27.262" endtime="20220623 09:33:27.428"/>
+</kw>
+<doc>Capture a screen successfully</doc>
+<tag>1.0</tag>
+<tag>1.0.1</tag>
+<status status="PASS" starttime="20220623 09:33:18.128" endtime="20220623 09:33:27.429"/>
+</test>
+<doc>Screen Capture</doc>
+<status status="PASS" starttime="20220623 09:33:17.559" endtime="20220623 09:33:27.432"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">1.0</stat>
+<stat pass="1" fail="0" skip="0">1.0.1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Screencapture">Screencapture</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

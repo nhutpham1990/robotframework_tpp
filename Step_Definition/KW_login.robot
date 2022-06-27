@@ -14,11 +14,11 @@ Navigate_to_the_web_and_login_successfully
   Click Element    ${login_button}
   Sleep    5
 
-# login_admin
-#   [Arguments]       ${email_value}       ${password_value}
-#   Open Browser      ${url}               ${ENV_web}
-#   Maximize Browser Window
-#   Input Text        ${email_field}       ${email_value}
-#   Input Password    ${password_field}    ${password_value}
-#   Click Element     ${login_button}
-#   Sleep    5
+login_admin
+  [Arguments]       ${email_value}       ${password_value}
+  Open Browser      ${url}               ${ENV_web}
+  Maximize Browser Window
+  Input Text        ${email_field}       ${email_value}
+  Input Password    ${password_field}    ${password_value}
+  Click Element     ${login_button}
+  Sleep    5
